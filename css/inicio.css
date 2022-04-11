@@ -8,15 +8,12 @@ table {
     
    }
 th{ 
-    background-color: #2714AC;
+    background-color: #9592AE;
     border: 1px solid black;
-    border-collapse:collapse 
    } 
 td{
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;
-    border-collapse:collapse 
-    
+    border: 1px solid black;    
 }
 h1 {
     text-align: center;
