@@ -1,7 +1,7 @@
 table {
     margin-right:auto;
     margin-left: auto;
-    margin-top: 150px;
+    margin-top: 20px;
     border: 1px solid black;
     border-collapse:collapse
     
@@ -9,6 +9,7 @@ table {
     
    }
 th{ 
+    
     background-color: #9592AE;
     border: 1px solid black;
     height: 20px;
@@ -38,10 +39,10 @@ h1 {
     width: 500px;
     height: 120px;
     background: rgb(4, 4, 12);
-    padding: 10px;
+    padding:5px;
     margin: auto;
-    margin-top: 50px;
-    border-radius: 4px;
+    margin-top: 20px;
+    border-radius: 90px;
     font-family: 'arial';
     color: white;
     box-shadow: 7px 13px 37px #000;
@@ -71,11 +72,10 @@ ul {
     text-decoration: none;
   }
 .header-bar {
-    margin-left: 5px;
-    margin-top:10px;
-    width:auto;
-    padding: 5px;
+    margin:auto;
     background-color: #24303c;
-    padding:5px
-    
+    padding: 1px;
+    width: 900px;
+    margin-top: 80px;
+   
 }
