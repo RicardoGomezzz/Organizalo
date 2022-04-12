@@ -4,18 +4,22 @@ table {
     margin-top: 150px;
     border: 1px solid black;
     border-collapse:collapse 
-    width 95%
+    
     
    }
 th{ 
-    background-color: #2714AC;
+    background-color: #2612aa;
     border: 1px solid black;
-    border-collapse:collapse 
+    border-collapse:collapse
+    
+    
    } 
-td{
+td{ 
+    text-align: center;
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     border-collapse:collapse 
+    
     
 }
 h1 {

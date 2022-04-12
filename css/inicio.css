@@ -3,24 +3,51 @@ table {
     margin-left: auto;
     margin-top: 150px;
     border: 1px solid black;
-    border-collapse:collapse 
-    width 95%
+    border-collapse:collapse
+    
+
     
    }
 th{ 
     background-color: #9592AE;
     border: 1px solid black;
+    height: 20px;
+    width: 30px;
+    text-align: center;
+    padding: 10px;
    } 
 td{
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;    
+    border: 1px solid black; 
+    text-align: center;
+    padding: 5px;
 }
 h1 {
     text-align: center;
     color: white;
     margin-top: 50px;
     
+    
 }
 .ingreso{
     text-align: center;
+ 
+    
+}
+.form-register{
+    width: 500px;
+    height: 120px;
+    background: rgb(4, 4, 12);
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-family: 'arial';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    border-bottom: 1px solid rgb(233, 233, 236);
+    border-top: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+
 }
