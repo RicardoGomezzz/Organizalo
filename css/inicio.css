@@ -79,11 +79,3 @@ ul {
     margin-top: 80px;
    
 }
-.task-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    border-top: 1px solid #dfe4ea;
-    overflow: hidden;
-}
