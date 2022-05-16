@@ -66,3 +66,14 @@ body{
 .form-login a:hover {
     text-decoration: underline;
 }
+.form-group{
+    padding: 0%;
+ }
+ .form-control{
+     width: 100%;
+     padding: 10px;
+     border-radius: 4px;
+     margin-bottom: 10px;
+     border: 1px solid #1f53c5;
+     font-size: 14px;
+ }
