@@ -12,7 +12,7 @@
     background: #24303c;
     padding: 50px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     border-radius: 4px;
     font-family: 'calibri';
     color: white;
@@ -71,5 +71,15 @@
     margin: 16px 0;
     font-size: 16px;
 
-
+}
+.form-group{
+   padding: 0%;
+}
+.form-control{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #1f53c5;
+    font-size: 14px;
 }
