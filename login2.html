@@ -37,14 +37,14 @@
 
                 <!---  LOGIN     -->
 
-                <form action="#" method="post">
+                <form action="#" method="post" id="formlogin">
                     <div class="mb-4">
                         <label for="email" class="form-label">Correo Electronico    </label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control" name="email">
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label">Contraseña     </label>
-                        <input type="email" class="form-control">
+                        <input type="password" class="form-control" name="password">
                     </div>
                     <div class="mb-4 form-check">
                         <input type="checkbox" name="connected" class="form-check-input" id="">
@@ -94,6 +94,10 @@
         </div>
     </div>
     <script src="bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/localization/messages_es.min.js"></script>
+    <script src="js/validacionform.js"></script>
 </body>
 
 </html>
