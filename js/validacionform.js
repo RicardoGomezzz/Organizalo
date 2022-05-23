@@ -25,8 +25,7 @@ $("#formlogin").validate({
       },
     },
     messages: {
-        email: "Favor ingresar correo",
-        nombre: "Favor ingresar nombre"
+        
     }
   });
 
