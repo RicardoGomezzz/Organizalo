@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background: DarkSlateGray;
+            background: linear-gradient(to right, white, skyblue , Navy);
+        }
+    </style>
+</head>
+<br><br><br><br>
+<div class="container w-60 bg-primary mt-5 rounded shadow">
+  <div class="row align-items-stretch">
+      <div class="col bg-white p-5 rounded-end">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Descripcion de Movimiento</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Compra de mercaderia">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Monto</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: -50.000, +100.000">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Cuenta Utilizada</label>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Mis Cuentas</option>
+      <option value="1">Debito Banco Estado</option>
+      <option value="2">Visa *****93</option>
+      <option value="3">Mach</option>
+      <option value="4">Efectivo</option>
+    </select>
+  </div>
+  <button type="button" class="btn btn-success">Agregar</button>
+</div>
+  </div>
+</div>
+  </body>
+</html>
