@@ -27,9 +27,9 @@ html, body {
   }
   
   .content h1 {
-    font-family: 'Century Gothic', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 500%;
-    color: #f9f3f4;
+    color: black;
     text-shadow: 0 0 300px black;
   }
   
@@ -37,10 +37,10 @@ html, body {
     margin-right: 20px;
     border-radius: 9px;
     text-decoration: none;
-    color: #f9f3f4;
-    font-family: 'Century Gothic', sans-serif;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    border: 3px solid;
+    border: 3px solid black;
     padding: 7px 13px;
   }
   

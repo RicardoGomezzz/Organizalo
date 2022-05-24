@@ -29,8 +29,17 @@ $("#formlogin").validate({
         nombre: "Favor ingresar nombre"
     }
   });
+  $("#formdatos").validate({
+    rules:{
+      descripcion: "required",
+      monto: "required"
+    },
+    messages: {
+      descripcion: "Favor ingresar descripcion",
+      monto: "Favor ingresar el monto"
+    } 
+  });
 
-  
 
 
 

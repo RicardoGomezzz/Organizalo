@@ -14,20 +14,21 @@
     </style>
 </head>
 <br><br><br><br>
+<form action="#" method="post" id="formdatos">
 <div class="container w-60 bg-primary mt-5 rounded shadow">
   <div class="row align-items-stretch">
       <div class="col bg-white p-5 rounded-end">
 <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Descripcion de Movimiento</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Compra de mercaderia">
+    <label for="descripcion" class="form-label">Descripcion de Movimiento</label>
+    <input type="text" class="form-control"  name= "descripcion"id="descripcion" placeholder="Compra de mercaderia">
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Monto</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: -50.000, +100.000">
+    <label for="monto" class="form-label">Monto</label>
+    <input type="number" class="form-control" id="monto" name="monto" placeholder="Ejemplo: -50.000, +100.000">
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Cuenta Utilizada</label>
-    <select class="form-select" aria-label="Default select example">
+    <select class="form-select" aria-label="Default select example" name="tarjeta">
       <option selected>Mis Cuentas</option>
       <option value="1">Debito Banco Estado</option>
       <option value="2">Visa *****93</option>
@@ -35,9 +36,14 @@
       <option value="4">Efectivo</option>
     </select>
   </div>
-  <button type="button" class="btn btn-success">Agregar</button>
+  <button type="submit" class="btn btn-primary">Agregar</button>
 </div>
   </div>
 </div>
+</form>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/localization/messages_es.min.js"></script>
+    <script src="js/validacionform.js"></script>
   </body>
 </html>
