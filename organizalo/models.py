@@ -8,7 +8,7 @@ class Descripcion(models.Model):
     nombre = models.CharField(max_length=300)
     
     def __str__(self):
-        return self.Descripcionn
+        return self.nombre
     
 class Monto(models.Model):
     cantidad = models.IntegerField()
