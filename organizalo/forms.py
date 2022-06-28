@@ -8,6 +8,6 @@ from organizalo.models import Transaccion
 
 class FormularioTransaccion (forms.ModelForm):
     class Meta:
-        model - Transaccion
+        models = Transaccion
         fields = '__all__'
         widgets = ()
