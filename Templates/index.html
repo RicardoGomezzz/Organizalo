@@ -1,4 +1,18 @@
-<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <a class="dropdown-item" href="{% url 'registrarTransaccion' %}">Formulario</a>
-    <a class="dropdown-item" href="{% url 'guardarTransaccion' %}">Formulario</a>
-</div>
+{% extends 'nuevomov.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="#" method="post">
+
+
+  {% csrf_token %}
+  {{ form }}
+
+
+  <button type="submit" class="btn btn-primary">Agregar</button>
+
+
+</form>
+
+
+
+{% endblock  %}
