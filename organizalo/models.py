@@ -4,17 +4,13 @@ from django.db import models
 # Create your models here.
 
 
-class Descripcion(models.Model):
-    nombre = models.CharField(max_length=300)
+class Transaccion(models.Model):
+    Descripcion = models.CharField(max_length=300)
+    Monto = models.IntegerField()
+    Cuenta = models.CharField(max_length=50)
+    codigo = models.IntegerField()
     
-    def __str__(self):
-        return self.nombre
-    
-class Monto(models.Model):
-    cantidad = models.IntegerField()
 
-class Cuenta(models.Model):
-    tipo= models.CharField(max_length=50)
 
     
     
