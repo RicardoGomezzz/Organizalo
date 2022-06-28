@@ -1,15 +1,8 @@
 from django.contrib import admin
-from .models import Descripcion,Monto,Cuenta
+from .models import Transaccion
 # Register your models here.
 
-class DescripcionAdmin(admin.ModelAdmin):
-    list = ('nombre')
-    admin.site.register(Descripcion)
+class TransaccionAdmin(admin.ModelAdmin):
+    list = ('Descripcion','Monto','Cuenta','codigo')
+    admin.site.register(Transaccion)
     
-class MontoAdmin(admin.ModelAdmin):
-    list = ('cantidad')
-    admin.site.register(Monto)
-
-class CuentaAdmin(admin.ModelAdmin):
-    list = ('tipo')
-    admin.site.register(Cuenta)
