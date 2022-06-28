@@ -41,7 +41,7 @@ DJANGO_APPS=[
     'crispy_forms',
 ]
 
-crispy_template_pack - 'bootstrap5'
+CRISPY_TEMPLATE_PACK =['bootstrap5']
 
 COSTUMER_APPS=[
     'organizalo',
