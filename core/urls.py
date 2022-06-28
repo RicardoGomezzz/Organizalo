@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from organizalo.views import FormularioTransaccionView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('registrarTransaccion/', FormularioTransaccionView.index, name='registrarTransaccion'),
+    path('guardarTransaccion/', FormularioTransaccionView.procesar_formulario, name='guardarTransaccion')
 ]

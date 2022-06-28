@@ -12,7 +12,7 @@ class FormularioTransaccionView(HttpRequest):
         return render(request,"TransaccionIndex.html", {"form":transaccion})
     
     def procesar_formulario(request):
-        transaccion = FormularioTransaccion()
+        transaccion = FormularioTransaccion(request.POST)
         if transaccion.is_valid():
             transaccion.save()
             transaccion - FormularioTransaccion()
