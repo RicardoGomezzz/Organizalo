@@ -17,11 +17,20 @@ from operator import index
 from django.contrib import admin
 from organizalo.views import FormularioTransaccionView
 from django.urls import path
+<<<<<<< HEAD
+=======
+from organizalo.views import formu
+>>>>>>> 0d19faf1284f0fe4d4aabca90e2c4e7d946dbefb
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('registrarTransaccion/', FormularioTransaccionView.index, name='registrarTransaccion'),
+=======
+    path('', formu, name="Index")  ,
+    path('registrarTransaccion/', FormularioTransaccionView.formu, name='registrarTransaccion'),
+>>>>>>> 0d19faf1284f0fe4d4aabca90e2c4e7d946dbefb
     path('guardarTransaccion/', FormularioTransaccionView.procesar_formulario, name='guardarTransaccion')
 ]
