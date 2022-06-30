@@ -1,8 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpRequest
-from organizalo.forms import FormularioTransaccion
 
 # Create your views here.
+
+
+def Listado_usuarios (request): 
+    return render (request, 'listado.html')
+    
+
 
 class FormularioTransaccionView(HttpRequest):
     

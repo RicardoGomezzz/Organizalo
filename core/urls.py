@@ -17,13 +17,11 @@ from operator import index
 from django.contrib import admin
 from organizalo.views import FormularioTransaccionView
 from django.urls import path
-from organizalo.views import Index
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name="Index")  ,
     path('registrarTransaccion/', FormularioTransaccionView.index, name='registrarTransaccion'),
     path('guardarTransaccion/', FormularioTransaccionView.procesar_formulario, name='guardarTransaccion')
 ]
