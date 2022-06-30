@@ -7,7 +7,7 @@ from .models import Transaccion
 from organizalo.models import Transaccion
 
 
-class FormularioTransaccion (forms.ModelForm):
+class TranscForm (forms.ModelForm):
     class Meta:
         models = Transaccion
         fields = '__all__'
