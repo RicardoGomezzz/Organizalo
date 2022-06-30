@@ -15,15 +15,12 @@ Including another URLconf
 """
 from operator import index
 from django.contrib import admin
-from organizalo.views import FormularioTransaccionView
 from django.urls import path
-from organizalo.views import formu
+from organizalo.views import bienvenida
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', formu, name="Index")  ,
-    path('registrarTransaccion/', FormularioTransaccionView.formu, name='registrarTransaccion'),
-    path('guardarTransaccion/', FormularioTransaccionView.procesar_formulario, name='guardarTransaccion')
+    path('bienvenida/', bienvenida)
 ]
