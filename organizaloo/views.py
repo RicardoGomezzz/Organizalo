@@ -1,13 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from .models import Transaccion
+from .forms import TransaccionForm
+from django.contrib import messages
 # Create your views here.
 
 def index(request):  #PAGINA 1
     return render(request, 'organizalo/base.html')
 
 def formulario(request):
-    return render (request, 'organizalo/formTransaccion.html')
+    data = {
+        'form': TransaccionForm()
+    }
+    if request.method == 'POST':
+        formulario = TransaccionForm (data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            data["mensaje"]="mensaje enviado"
+    return render (request, 'organizalo/formTransaccion.html',data)
 
 def inicio(request): #PAGINA INICIO
     return render (request, 'organizalo/home.html')
@@ -24,3 +34,4 @@ def registro(request): #PAGINA INICIO
 def listado_trans(request): #LISTA DE MOVIMIENTOS
     listado = Transaccion.objects.all();
     return render (request, 'organizalo/Listado.html', {'listado': listado})
+

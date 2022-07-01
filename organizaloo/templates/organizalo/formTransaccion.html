@@ -2,36 +2,13 @@
 {%load static%}
 {%block contenido%}
 
-<form action="#" method="post" id="formdatos">
-    <div class="container w-60 bg-primary mt-5 rounded shadow">
-      <a href="movimientos.html">
-      <img src="{% static './img/atras.png' %}" alt="" width="70" height="40">
-    </a>
-      <br>
-      <div class="row align-items-stretch">
-          <div class="col bg-white p-5 rounded-end">
-    <div class="mb-3">
-        <label for="descripcion" class="form-label">Descripcion de Movimiento</label>
-        <input type="text" class="form-control"  name= "descripcion"id="descripcion" placeholder="Compra de mercaderia">
-      </div>
-      <div class="mb-3">
-        <label for="monto" class="form-label">Monto</label>
-        <input type="number" class="form-control" id="monto" name="monto" placeholder="Ejemplo: -50.000, +100.000">
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Cuenta Utilizada</label>
-        <select class="form-select" aria-label="Default select example" name="tarjeta">
-          <option selected>Mis Cuentas</option>
-          <option value="1">Debito Banco Estado</option>
-          <option value="2">Visa *****93</option>
-          <option value="3">Mach</option>
-          <option value="4">Efectivo</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-primary">Agregar</button>
-    </div>
-      </div>
-    </div>
-    </form>
+<form action="" method="post" id="formdatos" class="formdatos">
+  
+   {% csrf_token %}
+
+  {{ form }}
+
+    <input type="submit" class="btn btn-primary" name="btnEnviar" value="Enviar">
+</form>
 
 {%endblock%}
