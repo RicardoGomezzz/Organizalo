@@ -21,5 +21,5 @@ class Transaccion(models.Model):
     Cuenta = models.IntegerField(choices=opciones_cuenta)
     
     def __str__(self):
-        return self.Monto
+        return self.Descripcion
     
