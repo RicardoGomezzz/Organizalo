@@ -1,7 +1,6 @@
 {%extends 'organizalo/base.html'%}
 {%load static%}
 {%block contenido%}
-
 <div class="container w-60 bg-primary mt-5 rounded shadow">
     <div class="row align-items-stretch">
         <div class="col bg-dark p-5 rounded-end"> 
@@ -10,20 +9,28 @@
     {% for Transaccion in listado %}
       <table class="table table-dark table-hover">
         <thead>
-          <tr>
-            <th>
-                {{ Transaccion.Fecha }}
-            </th>
-            <th>
-                DESCRIPCION DEL MOVIMIENTO
-            </th>
-            <th>
-                MONTO
+            <tr>
+              <th>
+                  FECHA
               </th>
-            <th>
-                CUENTA</th>
-          </tr>
-        </thead>
+              <th>
+                  DESCRIPCION DEL MOVIMIENTO
+              </th>
+              <th>
+                  MONTO
+                </th>
+              <th>
+                  CUENTA
+                </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{Transaccion.Fecha}}</td>
+              <td>{{Transaccion.Descripcion | capfirst}}</td>
+              <td><font style="color: green;">${{Transaccion.Monto}}</td>
+              <td>{{Transaccion.Cuenta}}</td>
+            </tr>
         <tbody>
           
         </tbody>

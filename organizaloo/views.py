@@ -21,10 +21,6 @@ def menu(request): #PAGINA INICIO
 def registro(request): #PAGINA INICIO
     return render (request, 'organizalo/registro.html')
 
-def listado(request): #LISTA DE MOVIMIENTOS
-    transaccion = Transaccion.objects.all()
-    data = {
-        'transacciones': transaccion
-        
-    }
-    return render (request, 'organizalo/Listado.html')
+def listado_trans(request): #LISTA DE MOVIMIENTOS
+    listado = Transaccion.objects.all();
+    return render (request, 'organizalo/Listado.html', {'listado': listado})
