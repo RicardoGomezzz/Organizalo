@@ -10,3 +10,12 @@ def formulario(request):
 
 def inicio(request): #PAGINA INICIO
     return render (request, 'organizalo/home.html')
+
+def login(request): #PAGINA INICIO
+    return render (request, 'organizalo/login.html')
+
+def menu(request): #PAGINA INICIO
+    return render (request, 'organizalo/menu.html')
+
+def registro(request): #PAGINA INICIO
+    return render (request, 'organizalo/registro.html')
