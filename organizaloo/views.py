@@ -5,3 +5,6 @@ from django.http import HttpResponse
 def index(request):  #PAGINA 1
     return render(request, 'organizalo/base.html')
 
+def formulario(request):
+    return render (request, 'organizalo/formTransaccion.html')
+
