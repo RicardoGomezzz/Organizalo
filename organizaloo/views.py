@@ -8,3 +8,5 @@ def index(request):  #PAGINA 1
 def formulario(request):
     return render (request, 'organizalo/formTransaccion.html')
 
+def inicio(request): #PAGINA INICIO
+    return render (request, 'organizalo/home.html')
