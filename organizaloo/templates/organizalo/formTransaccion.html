@@ -1,11 +1,11 @@
 {%extends 'organizalo/base.html'%}
-
+{%load static%}
 {%block contenido%}
 
 <form action="#" method="post" id="formdatos">
     <div class="container w-60 bg-primary mt-5 rounded shadow">
       <a href="movimientos.html">
-      <img src="img/atras.png" alt="" width="70" height="40">
+      <img src="{% static './img/atras.png' %}" alt="" width="70" height="40">
     </a>
       <br>
       <div class="row align-items-stretch">
