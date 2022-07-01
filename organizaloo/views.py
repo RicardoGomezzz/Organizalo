@@ -1,6 +1,8 @@
+import imp
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 
-def bievenida(request):
-    return HttpResponse("Bienvenidos a la pagina web")
+def index(request):  #PAGINA 1
+    return render(request, 'organizalo/base.html')
+

@@ -1,6 +1,7 @@
 from django.apps import AppConfig
 
 
-class OrganizalooConfig(AppConfig):
+class GestorConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'organizaloo'
+   
