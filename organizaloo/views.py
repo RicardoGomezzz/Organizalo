@@ -37,16 +37,13 @@ def listado_trans(request): #LISTA DE MOVIMIENTOS
     listado = Transaccion.objects.all();
     return render (request, 'organizalo/Listado.html', {'listado': listado})
 
-<<<<<<< HEAD
 
 def modificar_trans(request, id):
     
     return render(request, 'organizalo/modificar.html')
 
-=======
 def eliminar_dato (request, id):
     transaccion = get_object_or_404(Transaccion, id=id)
     transaccion.delete()
     
     return redirect (to='listado')
->>>>>>> 10eb33cc356900710c74d20c696139485daad138
