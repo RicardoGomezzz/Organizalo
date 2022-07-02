@@ -35,3 +35,8 @@ def listado_trans(request): #LISTA DE MOVIMIENTOS
     listado = Transaccion.objects.all();
     return render (request, 'organizalo/Listado.html', {'listado': listado})
 
+def eliminar_dato (request, id):
+    transaccion = get_object_or_404(Transaccion, id=id)
+    transaccion.delete()
+    
+    return redirect (to='listado')

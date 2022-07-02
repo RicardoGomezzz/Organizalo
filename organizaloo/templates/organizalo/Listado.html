@@ -30,6 +30,7 @@
               <td>{{Transaccion.Descripcion | capfirst}}</td>
               <td><font style="color: green;">${{Transaccion.Monto}}</td>
               <td>{{Transaccion.Cuenta}}</td>
+              <td><a class="btn btn-danger" href="{%url 'eliminar' Transaccion.id%}"> </a></td>
             </tr>
         <tbody>
           
