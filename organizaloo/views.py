@@ -17,6 +17,8 @@ def formulario(request):
         if formulario.is_valid():
             formulario.save()
             data["mensaje"]="mensaje enviado"
+        else:
+            data["form"] = formulario
     return render (request, 'organizalo/formTransaccion.html',data)
 
 def inicio(request): #PAGINA INICIO
@@ -34,4 +36,9 @@ def registro(request): #PAGINA INICIO
 def listado_trans(request): #LISTA DE MOVIMIENTOS
     listado = Transaccion.objects.all();
     return render (request, 'organizalo/Listado.html', {'listado': listado})
+
+
+def modificar_trans(request, id):
+    
+    return render(request, 'organizalo/modificar.html')
 
