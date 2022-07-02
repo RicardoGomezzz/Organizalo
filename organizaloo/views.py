@@ -39,8 +39,15 @@ def listado_trans(request): #LISTA DE MOVIMIENTOS
 
 
 def modificar_trans(request, id):
+    transaccion = get_object_or_404(Transaccion, id=id)
     
-    return render(request, 'organizalo/modificar.html')
+    data = {
+        
+        'form': TransaccionForm(instance=transaccion)
+        
+    }
+    
+    return render(request, 'organizalo/modificar.html', data)
 
 def eliminar_dato (request, id):
     transaccion = get_object_or_404(Transaccion, id=id)
