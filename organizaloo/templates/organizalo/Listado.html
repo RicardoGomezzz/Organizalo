@@ -30,7 +30,9 @@
               <td>{{Transaccion.Descripcion | capfirst}}</td>
               <td><font style="color: light;">${{Transaccion.Monto}}</td>
               <td>{{Transaccion.Cuenta | title}}</td>
-              <td><a class="btn btn-danger" href="{%url 'eliminar' Transaccion.id%}"> </a></td>
+              <td><a class="btn btn-warning" href="{%url 'modificar' Transaccion.id%}">Modificar</a></td>
+              &nbsp;
+              <td><a class="btn btn-danger" href="{%url 'eliminar' Transaccion.id%}">Eliminar</a></td>
             </tr>
         <tbody>
           

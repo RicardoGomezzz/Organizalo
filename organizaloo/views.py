@@ -16,7 +16,7 @@ def formulario(request):
         formulario = TransaccionForm (data=request.POST)
         if formulario.is_valid():
             formulario.save()
-            data["mensaje"]="mensaje enviado"
+            data["mensaje"]="Datos Guardados!"
         else:
             data["form"] = formulario
     return render (request, 'organizalo/formTransaccion.html',data)
@@ -51,6 +51,7 @@ def modificar_trans(request, id):
         formulario = TransaccionForm(data=request.POST, instance=transaccion)
         if formulario.is_valid():
             formulario.save()
+            #messages.success(request, "Modificado Correctamente!")
             return redirect(to="listado")
         data['form'] = formulario
     

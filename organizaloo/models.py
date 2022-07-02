@@ -5,10 +5,10 @@ from django.db import models
 
 opciones_cuenta = [
     
-    [0, 'Debito'],
-    [1, 'Visa'],
-    [2, 'Mach'],
-    [3, 'Efectivo']
+    [0, "Debito"],
+    [1, "Visa"],
+    [2, "Mach"],
+    [3, "Efectivo"]
     
 ]
 
