@@ -47,6 +47,13 @@ def modificar_trans(request, id):
         
     }
     
+    if request.method == 'POST':
+        formulario = TransaccionForm(data=request.POST, instance=transaccion)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect(to="listado")
+        data['form'] = formulario
+    
     return render(request, 'organizalo/modificar.html', data)
 
 def eliminar_dato (request, id):
