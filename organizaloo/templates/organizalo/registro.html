@@ -73,5 +73,21 @@
             </div>
         </div>
     </div>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+    $(document).ready(function(){
+      $("#btnregister").click(function(){
+        var correo = $("#email").val();
+        var contraseña = $("#password").val();
+        var nombre = $("#name").val(); 
+        
+        
+            
+        
+        
+            if (nombre == "" || correo == "" || contraseña ==  "" ){alert("Formulario incompleto");
+        }
+        });
+    });   
 {%endblock%}
