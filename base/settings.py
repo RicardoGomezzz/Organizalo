@@ -31,6 +31,11 @@ ALLOWED_HOSTS = ['*']
 MESSAGE_SOTRAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 # Application definition
 
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -134,3 +139,5 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'base/static')),
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

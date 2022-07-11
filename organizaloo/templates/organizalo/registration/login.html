@@ -16,7 +16,10 @@
 
                 <!---  LOGIN     -->
 
-                <form action="Inicio2.html"  id="formlogin">
+                <form action=""  method="post" id="formlogin">
+
+                    {% csrf_token %}
+
                     <div class="mb-4">
                         <label for="email" class="form-label">Correo Electronico    </label>
                         <input type="email" class="form-control" name="email">
@@ -30,7 +33,7 @@
                         <label for="connected" class="form-check-label">Mantenerme Conectado</label>
                     </div>
                     <div class="d-grid">
-                        <a href="{% url 'inicio'%}" target="blank"> <button type="button" class="btn btn-primary">Iniciar Sesion</button></a>
+                        <!--<a href="{% url 'inicio'%}" target="blank">--> <INPUT type="submit" class="btn btn-primary" value="ingresar"></input></a>
                     </div>
 
                     <div class="my-3">

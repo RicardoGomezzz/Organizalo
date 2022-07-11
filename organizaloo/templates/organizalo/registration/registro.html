@@ -1,0 +1,78 @@
+{%extends 'organizalo/base2.html'%}
+
+{%load static%}
+{%block contenido2%}
+<div class="container w-60 bg-primary mt-5 rounded shadow">
+    <div class="row align-items-stretch">
+
+        <div class="col bg  d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+
+        </div>
+        <div class="col bg-white p-5 rounded-end">
+
+            <div class="text-end">
+            </div>
+            <h2 class="fw-bold text-center py-5">Registrate</h2>
+
+            <!---  REGISTRO    -->
+
+            <form class='form'  method="post"  id="formregister">
+                {% csrf_token %}
+                <div class="mb-4">
+                    <label for="email" class="form-label">Correo Electronico    </label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+                <div class="mb-4">
+                    <label for="name" class="form-label">Nombre y Apellido    </label>
+                    <input type="text" class="form-control" name="nombre">
+                </div>
+                <div class="mb-4">
+                    <label for="text" class="form-label">Contacto (Opcional)    </label>
+                    <input type="text" class="form-control" name="contacto">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="form-label">Contraseña     </label>
+                    <input type="password" class="form-control" name="password" id="password">
+                    <div id="error 1"></div>
+                </div>
+                <div class="d-grid">
+                    <a href="{% url 'inicio'%}"><button type="submit" class="btn btn-primary" action="#">Crear Cuenta</button> </a>
+                </div>
+
+                <div class="my-3">
+                    <span>¿Ya tienes una Cuenta? <a href="{% url 'login'%}" target="blank">Inicia Sesion</a></span>
+                </div>
+            </form>
+            <!------REDES SOCIALES------>
+            <div class="container w-100 my-5">
+                <div class="row text-center">
+                    <div class="col-12">Registrate con</div>
+                    <div class="row">
+                        <button class="btn btn-outline-primary w-100 my-1">
+                            <div class="row align-items-center">
+                                <div class="col-2 d-none d-md-block">
+                                    <img src="{% static 'img/fb.png' %} " width="32">
+                                </div>
+                                <div class="col-12 col-md-10 text-center">
+                                    Facebook
+                                </div>
+                            </div>
+                        </button>
+                        <button class="btn btn-outline-danger w-100 my-1">
+                            <div class="row align-items-center">
+                                <div class="col-2 d-none d-md-block">
+                                    <img src="{% static 'img/google.png' %}" width="32">
+                                </div>
+                                <div class="col-12 col-md-10 text-center">
+                                    Google
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{%endblock%}
