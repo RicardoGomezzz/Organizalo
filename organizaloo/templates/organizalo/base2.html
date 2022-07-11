@@ -17,9 +17,17 @@ DOCTYPE html>
             background: DarkSlateGray;
             background: linear-gradient(to right, Navy, skyblue , white, skyblue, Navy );
         }
+        .bg{
+            background-image: url({% static 'img/logo.jpg' %});
+            background-position: center center;
+        }
+
+        
     </style>
 </head>
 <body> 
+
+
 
       <div id="contenido2">
 
@@ -30,5 +38,6 @@ DOCTYPE html>
 
     {% block js %}
     {% endblock %}  
+    
 </body>
 </html>

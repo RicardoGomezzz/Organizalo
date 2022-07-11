@@ -11,7 +11,6 @@
         <div class="col bg-white p-5 rounded-end">
 
             <div class="text-end">
-                <img src='{% static "img/registro.jpg"}'>
             </div>
             <h2 class="fw-bold text-center py-5">Registrate</h2>
 
@@ -40,17 +39,18 @@
                 </div>
 
                 <div class="my-3">
-                    <span>¿Ya tienes una Cuenta? <a href="login2.html" target="blank">Inicia Sesion</a></span>
+                    <span>¿Ya tienes una Cuenta? <a href="{% url 'login'%}" target="blank">Inicia Sesion</a></span>
                 </div>
             </form>
             <!------REDES SOCIALES------>
             <div class="container w-100 my-5">
                 <div class="row text-center">
-                    <div class="col-12">Iniciar Sesion</div>
+                    <div class="col-12">Registrate con</div>
                     <div class="row">
                         <button class="btn btn-outline-primary w-100 my-1">
                             <div class="row align-items-center">
                                 <div class="col-2 d-none d-md-block">
+                                    <img src="{% static 'img/fb.png' %} " width="32">
                                 </div>
                                 <div class="col-12 col-md-10 text-center">
                                     Facebook
@@ -60,6 +60,7 @@
                         <button class="btn btn-outline-danger w-100 my-1">
                             <div class="row align-items-center">
                                 <div class="col-2 d-none d-md-block">
+                                    <img src="{% static 'img/google.png' %}" width="32">
                                 </div>
                                 <div class="col-12 col-md-10 text-center">
                                     Google
@@ -70,7 +71,6 @@
                 </div>
                 </div>
             </div>
-
         </div>
     </div>
     
