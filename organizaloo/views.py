@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Transaccion
 from .forms import TransaccionForm
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 
 def index(request):  #PAGINA 1
@@ -30,8 +31,6 @@ def login(request): #PAGINA INICIO
 def menu(request): #PAGINA INICIO
     return render (request, 'organizalo/menu.html')
 
-def registro(request): #PAGINA INICIO
-    return render (request, 'organizalo/registro.html')
 
 def listado_trans(request): #LISTA DE MOVIMIENTOS
     listado = Transaccion.objects.all();
@@ -62,3 +61,14 @@ def eliminar_dato (request, id):
     transaccion.delete()
     
     return redirect (to='listado')
+
+def registro(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            messages.succes(request, f'Usuario {username} creado con exito')
+    else:
+        form = UserCreationForm()
+    context = {'form': form}        
+    return render(request, 'organizalo/registro.html', context)

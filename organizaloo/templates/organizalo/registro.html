@@ -16,7 +16,8 @@
 
             <!---  REGISTRO    -->
 
-            <form action="login2.html" method="post" id="formregister">
+            <form class='form'  method="post" id="formregister">
+                {% csrf_token %}
                 <div class="mb-4">
                     <label for="email" class="form-label">Correo Electronico    </label>
                     <input type="email" class="form-control" name="email">
@@ -35,7 +36,7 @@
                     <div id="error 1"></div>
                 </div>
                 <div class="d-grid">
-                    <a href="{% url 'inicio'%}"><button type="button" class="btn btn-primary" action="#">Crear Cuenta</button></a>
+                    <!---<a href="{% url 'inicio'%}">--><button type="submit" class="btn btn-primary" >Crear Cuenta</button> <!--</a>-->
                 </div>
 
                 <div class="my-3">

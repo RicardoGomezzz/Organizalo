@@ -27,7 +27,13 @@ DOCTYPE html>
 </head>
 <body> 
 
-
+{% if messages %}
+    {% for message in messages %}
+    <div class="notification {{ message.tags }}">
+        {{ message }}
+    </div>    
+    {% endfor %}
+{% endif %}
 
       <div id="contenido2">
 

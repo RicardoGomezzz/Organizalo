@@ -13,7 +13,8 @@ urlpatterns = [
     path('registro/',registro, name='registro'),
     path('listado/',listado_trans, name='listado'),
     path('modificar/<id>/',modificar_trans, name='modificar'),
-    path('eliminar/<id>/',eliminar_dato, name='eliminar')
+    path('eliminar/<id>/',eliminar_dato, name='eliminar'),
+    
 
 
 ]
