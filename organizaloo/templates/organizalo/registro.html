@@ -20,11 +20,11 @@
                 {% csrf_token %}
                 <div class="mb-4">
                     <label for="email" class="form-label">Correo Electronico    </label>
-                    <input type="email" class="form-control" name="email">
+                    <input type="email" class="form-control" name="email" id="email">
                 </div>
                 <div class="mb-4">
                     <label for="name" class="form-label">Nombre y Apellido    </label>
-                    <input type="text" class="form-control" name="nombre">
+                    <input type="text" class="form-control" name="nombre" id="name">
                 </div>
                 <div class="mb-4">
                     <label for="text" class="form-label">Contacto (Opcional)    </label>
@@ -36,7 +36,7 @@
                     <div id="error 1"></div>
                 </div>
                 <div class="d-grid">
-                    <!---<a href="{% url 'inicio'%}">--><button type="submit" class="btn btn-primary" >Crear Cuenta</button> <!--</a>-->
+                    <a href="{% url 'inicio'%}"><button type="button" class="btn btn-primary" id="btnregister" >Crear Cuenta</button> </a>
                 </div>
 
                 <div class="my-3">
@@ -74,21 +74,6 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-    $(document).ready(function(){
-      $("#btnregister").click(function(){
-        var correo = $("#email").val();
-        var contraseña = $("#password").val();
-        var nombre = $("#name").val(); 
-        
-        
-            
-        
-        
-            if (nombre == "" || correo == "" || contraseña ==  "" ){alert("Formulario incompleto");
-        }
-        });
-    });   
+    
 {%endblock%}
+

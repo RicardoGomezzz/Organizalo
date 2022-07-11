@@ -46,6 +46,25 @@ DOCTYPE html>
 
       
     {% endblock %}  
-    
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      
+    $(document).ready(function(){
+      $("#btnregister").click(function(){
+        var correo = $("#email").val();
+        var contraseña = $("#password").val();
+        var nombre = $("#name").val(); 
+        
+        
+            
+        
+        
+            if (nombre == "" || correo == "" || contraseña ==  "" ){alert("Formulario incompleto");
+        }
+        });
+    });
+    <script>       
+
 </body>
 </html>
