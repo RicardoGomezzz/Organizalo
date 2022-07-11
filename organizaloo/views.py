@@ -26,7 +26,7 @@ def inicio(request): #PAGINA INICIO
     return render (request, 'organizalo/home.html')
 
 def login(request): #PAGINA INICIO
-    return render (request, 'organizalo/login.html')
+    return render (request, 'organizalo/registration/login.html')
 
 def menu(request): #PAGINA INICIO
     return render (request, 'organizalo/menu.html')
@@ -68,7 +68,8 @@ def registro(request):
         if form.is_valid():
             username = form.cleaned_data['username']
             messages.succes(request, f'Usuario {username} creado con exito')
+            return redirect('login')
     else:
         form = UserCreationForm()
     context = {'form': form}        
-    return render(request, 'organizalo/registro.html', context)
+    return render(request, 'organizalo/registration/registro.html', context)
