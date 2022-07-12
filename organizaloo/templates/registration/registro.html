@@ -2,6 +2,7 @@
 
 {%load static%}
 {%block contenido2%}
+{% load crispy_forms_tags %}
 <div class="container w-60 bg-primary mt-5 rounded shadow">
     <div class="row align-items-stretch">
 
@@ -18,7 +19,8 @@
 
             <form class='form'  method="post"  id="formregister">
                 {% csrf_token %}
-                <div class="mb-4">
+                {{ form | crispy }}
+                <!------<div class="mb-4">
                     <label for="email" class="form-label">Correo Electronico    </label>
                     <input type="email" class="form-control" name="email">
                 </div>
@@ -34,7 +36,7 @@
                     <label for="password" class="form-label">Contraseña     </label>
                     <input type="password" class="form-control" name="password" id="password">
                     <div id="error 1"></div>
-                </div>
+                </div>------>
                 <div class="d-grid">
                     <a href="{% url 'inicio'%}"><button type="submit" class="btn btn-primary" action="#">Crear Cuenta</button> </a>
                 </div>
@@ -74,5 +76,6 @@
             </div>
         </div>
     </div>
-    
+    <script src="{% static 'js/validacionform.js' %}"> </script>
+
 {%endblock%}

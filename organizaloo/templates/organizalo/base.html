@@ -31,6 +31,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'menu'%}" target="blank">Cerrar sesion</a>
               </li>
+              {% if user.is_authenticated %} 
+              <li class="nav-item">
+                <a class="nav-link" href="#">{{ user.username}}</a>
+              </li>
+              {% endif %}
             </ul>
           </div>
         </div>

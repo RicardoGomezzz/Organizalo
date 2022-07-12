@@ -1,6 +1,8 @@
 {%extends 'organizalo/base2.html'%}
 {%load static%}
 {%block contenido2%}
+{% load crispy_forms_tags %}
+
 <body>
     <div class="container w-75 bg-primary mt-5 rounded shadow">
         <div class="row align-items-stretch">
@@ -19,8 +21,9 @@
                 <form action=""  method="post" id="formlogin">
 
                     {% csrf_token %}
+                    {{ form | crispy }}
 
-                    <div class="mb-4">
+                    <!------<div class="mb-4">
                         <label for="email" class="form-label">Correo Electronico    </label>
                         <input type="email" class="form-control" name="email">
                     </div>
@@ -31,9 +34,12 @@
                     <div class="mb-4 form-check">
                         <input type="checkbox" name="connected" class="form-check-input" id="">
                         <label for="connected" class="form-check-label">Mantenerme Conectado</label>
-                    </div>
+                    </div>---->
+
+
+                    <br>
                     <div class="d-grid">
-                        <a href="{% url 'inicio'%}" target="blank"><INPUT type="submit" class="btn btn-primary" value="ingresar"></input></a>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
                     </div>
 
                     <div class="my-3">
@@ -75,5 +81,11 @@
             </div>
         </div>
     </div>
+    <script src="{% static 'js/validacionform.js' %}"> </script>
+
+
+{% block js %}
+{%endblock%}
+
 {%endblock%}
 
