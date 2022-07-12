@@ -1,9 +1,11 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from .models import Transaccion
-from .forms import TransaccionForm
+from .forms import CustomUserCreationForm, TransaccionForm
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
+
 # Create your views here.
 
 def index(request):  #PAGINA 1
@@ -25,8 +27,7 @@ def formulario(request):
 def inicio(request): #PAGINA INICIO
     return render (request, 'organizalo/home.html')
 
-def login(request): #PAGINA INICIO
-    return render (request, 'organizalo/registration/login.html')
+
 
 def menu(request): #PAGINA INICIO
     return render (request, 'organizalo/menu.html')
@@ -62,19 +63,23 @@ def eliminar_dato (request, id):
     
     return redirect (to='listado')
 
-def registro(request):
+def registro (request):
+    data = {
+        'form': CustomUserCreationForm()
+
+    }
+
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            messages.succes(request, f'Usuario {username} creado con exito')
-            return redirect('login')
-    else:
-        form = UserCreationForm()
-    context = {'form': form}        
-    return render(request, 'organizalo/registration/registro.html', context)
+        formulario = CustomUserCreationForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            user = authenticate(username=formulario.cleaned_data["username"], password= formulario.cleaned_data["password1"])
+            login(request, user)
+            messages.success(request, "Has completado el registro")
+            return redirect(to="inicio")
+        data["form"] = formulario
 
-
+    return render(request, 'registration/registro.html', data)
 
 def pagapi(request): #PAGINA INICIO
     return render (request, 'organizalo/apidolar.html')
