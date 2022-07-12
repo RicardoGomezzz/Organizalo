@@ -8,7 +8,7 @@
  <div class="row align-items-stretch">
     <h2>Mandanos tu sugerencia!</h2>
     <div class="col bg-light p-5 rounded-end">
-        <form action="" class="formulario_contacto" id="formulario_contacto">
+        <form action="" class="formulario_contacto" id="formulario_contacto" method="POST">
                     {% csrf_token %}
                     {{ form | crispy}}
 

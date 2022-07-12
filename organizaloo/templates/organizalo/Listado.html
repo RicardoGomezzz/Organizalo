@@ -49,5 +49,22 @@
     <h4 style="color: white; text-align: center; width: auto;"><a href="{% url 'Formulario'%}" style="text-decoration: none; color: aliceblue;" >Agregar Movimiento</a></h4>
     <br>
   </div>
+  <div class="container w-60 bg-light mt-5 rounded shadow align-items-center">
+        <h3>VERIFICA LOS PRECIOS DEL DOLAR</h3>
+          <div class="container align-items-center">
+        <div class="section">
+          <button class="btn blue" id="dolar">Dolar</button>
+          
+        </div>
+    <div class="section">
+    <ul id="resultado"></ul>
+
+    </div>
+  </div>  
+ 
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+<script src="{% static 'js/moneda.js' %}"> </script>
+  </div>
 
 {%endblock%}

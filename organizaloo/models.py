@@ -32,12 +32,12 @@ class Transaccion(models.Model):
         return self.Descripcion
     
 class Contacto(models.Model):
-    Nombre = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=50)
     Correo = models.EmailField()
     Tipo_consulta = models.IntegerField(choices=opciones_consultas)
     Mensaje = models.TextField()
     
-def __str__(self):
-    return self.Nombre
+    def __str__(self):
+        return self.nombre
 
     

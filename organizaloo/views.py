@@ -78,7 +78,6 @@ def registro (request):
             messages.success(request, "Has completado el registro")
             return redirect(to="inicio")
         data["form"] = formulario
-
     return render(request, 'registration/registro.html', data)
 
 def pagapi(request): #PAGINA INICIO
@@ -88,4 +87,11 @@ def contacto(request):
     data = { 
             'form': ContactoForm() 
             }
+    if request.method == 'POST':
+        formulario = ContactoForm (data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            data["mensaje"]="Datos Guardados!"
+        else:
+            data["form"] = formulario
     return render(request, 'organizalo/contacto.html', data)
