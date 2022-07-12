@@ -36,7 +36,7 @@
                     <div id="error 1"></div>
                 </div>
                 <div class="d-grid">
-                    <a href="{% url 'inicio'%}"><button type="button" class="btn btn-primary" id="btnregister" >Crear Cuenta</button> </a>
+                    <button type="button" class="btn btn-primary" id="crearCuenta" >Crear Cuenta</button> 
                 </div>
 
                 <div class="my-3">
@@ -75,5 +75,11 @@
         </div>
     </div>
     
-{%endblock%}
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/validacion.js' %}"></script>    
 
+
+    {%endblock%}
+
+</body>
