@@ -73,3 +73,8 @@ def registro(request):
         form = UserCreationForm()
     context = {'form': form}        
     return render(request, 'organizalo/registration/registro.html', context)
+
+
+
+def pagapi(request): #PAGINA INICIO
+    return render (request, 'organizalo/apidolar.html')
