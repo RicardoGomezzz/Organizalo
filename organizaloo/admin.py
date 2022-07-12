@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Transaccion
+from .models import Transaccion, Contacto
 # Register your models here.
 
 
@@ -12,3 +12,4 @@ class TransaccionAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Transaccion)
+admin.site.register(Contacto)

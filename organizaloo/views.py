@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from .models import Transaccion
-from .forms import TransaccionForm
+from .forms import TransaccionForm, ContactoForm
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
@@ -78,3 +78,9 @@ def registro(request):
 
 def pagapi(request): #PAGINA INICIO
     return render (request, 'organizalo/apidolar.html')
+
+def contacto(request):
+    data = { 
+            'form': ContactoForm() 
+            }
+    return render(request, 'organizalo/contacto.html', data)

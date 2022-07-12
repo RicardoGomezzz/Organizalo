@@ -12,6 +12,14 @@ opciones_cuenta = [
     
 ]
 
+opciones_consultas = [
+    
+    [0, "consulta"],
+    [1, "reclamo"],
+    [2, "sugerencia"],
+    
+]
+
 
 
 class Transaccion(models.Model):
@@ -22,4 +30,14 @@ class Transaccion(models.Model):
     
     def __str__(self):
         return self.Descripcion
+    
+class Contacto(models.Model):
+    Nombre = models.CharField(max_length=50)
+    Correo = models.EmailField()
+    Tipo_consulta = models.IntegerField(choices=opciones_consultas)
+    Mensaje = models.TextField()
+    
+def __str__(self):
+    return self.Nombre
+
     

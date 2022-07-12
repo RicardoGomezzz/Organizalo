@@ -1,5 +1,5 @@
 from django.urls import path
-from organizaloo.views import index,formulario, inicio, listado_trans, login,menu,registro, modificar_trans, eliminar_dato,pagapi
+from organizaloo.views import index,formulario, inicio, listado_trans, login,menu,registro, modificar_trans, eliminar_dato,pagapi, contacto
 from re import A
 
 
@@ -14,7 +14,8 @@ urlpatterns = [
     path('listado/',listado_trans, name='listado'),
     path('modificar/<id>/',modificar_trans, name='modificar'),
     path('eliminar/<id>/',eliminar_dato, name='eliminar'),
-    path('dolar', pagapi, name='dolar')
+    path('dolar', pagapi, name='dolar'),
+    path('contacto/',contacto, name='contacto'),
 
 
 ]
