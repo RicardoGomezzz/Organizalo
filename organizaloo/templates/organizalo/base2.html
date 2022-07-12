@@ -47,11 +47,11 @@ DOCTYPE html>
       
     {% endblock %}  
  
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
       
-    $(document).ready(function(){
-      $("#btnregister").click(function(){
+$(document).ready(function(){
+    $("#btnregister").click(function(){
         var correo = $("#email").val();
         var contraseña = $("#password").val();
         var nombre = $("#name").val(); 
@@ -60,11 +60,13 @@ DOCTYPE html>
             
         
         
-            if (nombre == "" || correo == "" || contraseña ==  "" ){alert("Formulario incompleto");
+        if (nombre == "" || correo == "" || contraseña ==  "" ){alert("Formulario incompleto");
         }
         });
     });
-    <script>       
+    <script>
+        
+   
 
 </body>
 </html>
