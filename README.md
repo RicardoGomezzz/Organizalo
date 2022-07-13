@@ -1,3 +1,3 @@
 # Organizalo
 
-Integrantes: Ricardo Gomez - Felipe Hidalgo - Daniel Antillanca
+Integrantes: Ricardo Gomez - Felipe Hidalgo - Nicolas Escobar
